@@ -5,6 +5,9 @@ import "./checkout-header.css";
 export const Checkoutpage = () => {
   return (
     <>
+
+      <title>Checkout</title>
+
       <div className="checkout-header">
         <div className="header-content">
           <div className="checkout-header-left-section">

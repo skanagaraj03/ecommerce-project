@@ -4,6 +4,9 @@ import "./Header.css";
 export function Homepage() {
   return (
     <>
+
+      <title>Ecommerce Project</title>
+
       <div className="header">
         <div className="left-section">
           <a href="/" className="header-link">
@@ -21,7 +24,7 @@ export function Homepage() {
         </div>
 
         <div className="right-section">
-          <a className="orders-link header-link" href="orders.html">
+          <a className="orders-link header-link" href="/orders">
             <span className="orders-text">Orders</span>
           </a>
 
