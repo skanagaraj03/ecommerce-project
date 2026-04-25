@@ -6,6 +6,7 @@ import axios from "axios";
 
 export function Homepage() {
   const [products, setProducts] = useState([]);
+  const [cartItems, setCartItems] = useState([]);
 
   // fetch("http://localhost:3000/api/products")
   //   .then((response) => {
@@ -20,14 +21,18 @@ export function Homepage() {
     .then((response) => {
        setProducts(response.data);
     });
-  }, []);
 
+  axios.get("http://localhost:3000/api/cart-items")
+    .then((response) => {
+        setCartItems(response.data);
+    });
+  }, []);
 
   return (
     <>
       <title>Ecommerce Project</title>
 
-      <Header />
+      <Header cartItems={cartItems} />
 
       <div className="home-page">
         <div className="products-grid">
