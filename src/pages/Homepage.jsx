@@ -4,9 +4,9 @@ import { useState, useEffect } from "react";
 import "./Homepage.css";
 import axios from "axios";
 
-export function Homepage() {
+export function Homepage({ cartItems }) {
   const [products, setProducts] = useState([]);
-  const [cartItems, setCartItems] = useState([]);
+  
 
   // fetch("http://localhost:3000/api/products")
   //   .then((response) => {
@@ -22,10 +22,6 @@ export function Homepage() {
        setProducts(response.data);
     });
 
-  axios.get("http://localhost:3000/api/cart-items")
-    .then((response) => {
-        setCartItems(response.data);
-    });
   }, []);
 
   return (

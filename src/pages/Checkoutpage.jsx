@@ -2,7 +2,7 @@ import React from "react";
 import "./checkout.css";
 import "./checkout-header.css";
 
-export const Checkoutpage = () => {
+export const Checkoutpage = ({ cartItems }) => {
   return (
     <>
 
@@ -20,7 +20,7 @@ export const Checkoutpage = () => {
           <div className="checkout-header-middle-section">
             Checkout (
             <a className="return-to-home-link" href="/">
-              3 items
+              {cartItems.length} items
             </a>
             )
           </div>
