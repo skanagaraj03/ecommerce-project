@@ -3,13 +3,13 @@ import './orders.css';
 import { Header } from "../components/Header";
 import { Link } from "react-router";
 
-export const Orderspage = () => {
+export const Orderspage = ({ cartItems }) => {
   return (
     <>
 
     <title>orders</title>
 
-      <Header />
+      <Header cartItems={cartItems} />
 
       <div class="orders-page">
         <div class="page-title">Your Orders</div>
